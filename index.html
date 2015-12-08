@@ -1,0 +1,31 @@
+<!doctype html>
+<html ng-app="project">
+<head>
+   <script src="jquery-2.1.4.js"></script>
+   <script src="http://192.168.1.88:8080/socket.io/socket.io.js"></script>
+   <script>
+      var myIoSocket = io.connect('http://192.168.1.88:8080');
+      myIoSocket.on('btn1 shutdown', function () { 
+      //Set the value of connected flag 
+         console.log("lol");
+         $('#bnt1').color(yellow);
+      });
+   </script>
+</head>
+<body>
+   <h2>JavaScript Projects</h2>
+   <div>
+      <button id="1">1</button><br>
+      <button id="2">2</button><br>
+      <button id="3">3</button><br>
+   </div>
+</body>
+<script>
+    $('#1').click(function() {
+        console.log("btn1 clicked");
+        myIoSocket.emit('btn1',5);
+    });
+</script>
+</html>
+
+
