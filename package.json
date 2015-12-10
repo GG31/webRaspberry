@@ -1,0 +1,10 @@
+{
+  "name": "webRaspberry",
+  "version": "0.0.1",
+  "description": "webRaspberry",
+  "dependencies": {
+    "express": "",
+    "node-gpio": "",
+    "socket.io": ""
+  }
+}
